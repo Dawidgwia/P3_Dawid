@@ -1,0 +1,93 @@
+.main-header {
+    background-image: radial-gradient(circle at top center, $mint ,$primary);
+    color: $text-white;
+    //border-bottom: black 2px solid;
+
+
+
+    .hero {
+
+        display: flex;
+        padding-top: 5em;
+        flex-wrap: wrap;
+        transition: all ease-in-out 250ms;
+        &:hover{
+            transform: scale(1.05) rotate(-5deg);
+        }
+
+        .hero-logo {
+            width: 33.33333%;
+            text-align: center;
+            img {
+                border-radius: 75%;
+                width: 50%;
+                max-width: 20rem;
+            }
+        }
+
+        .hero-name {
+            width: 33.33333%;
+            margin:auto;
+
+            .hero-text {
+                @include text($font-black);
+                
+            }
+        
+        
+        }
+        .hero-work {
+            width: 33.33333%;
+            text-align: center;
+            margin:auto;
+            .hero-text {
+                @include text($font-black)
+            }
+        }
+    }
+    .main-nav {
+        display: flex;
+        justify-content: flex-end;
+
+
+        width: 100%;
+
+        .nav-list {
+
+            display: flex;
+            padding: 2em;
+            justify-content: space-around;
+            list-style: none;
+            padding-bottom: 0;
+            transition: all ease-in-out 250ms;
+            li:hover {
+                transform: scale(1.08);
+
+            }
+
+            
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: $font-bold;
+                color: $text-white;
+                cursor: pointer;
+                padding: 1em 5em;
+                transition: all ease-in-out 250ms;
+                margin-right: 0.2em;
+
+            }
+            
+            a:hover {
+                background-color: $mint;
+                border: $text-white 1px solid;
+                letter-spacing: 0.15em;
+
+            }
+            
+        }
+    }
+    .hamburger {
+            display: none;
+        }
+    }
