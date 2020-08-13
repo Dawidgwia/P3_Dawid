@@ -803,8 +803,6 @@ main .About .wrap .lorem {
   background-color: #041604;
   border-radius: 25%;
   border: 3px solid #444;
-  -webkit-transform: scale(1.6);
-          transform: scale(1.6);
 }
 
 .btn-secoundary {
