@@ -732,7 +732,7 @@ main .wrap .lorem {
 
 .projects {
   background-color: #05a63a;
-  padding: 1em 0;
+  padding: 4em 0;
 }
 
 .projects .project-img {
@@ -757,6 +757,7 @@ main .wrap .lorem {
 }
 
 .container .footer-text {
+  margin-left: 4.1em;
   width: 75%;
   padding-top: 2em;
 }
@@ -777,5 +778,51 @@ main .wrap .lorem {
   background-color: black;
   color: white;
   text-align: center;
+}
+
+.btn-primary {
+  background-color: #a1f7a1;
+  padding: 2em 4em;
+  margin-bottom: 3em;
+  color: #041604;
+  border: 2px solid #041604;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
+}
+
+.btn-primary:hover {
+  color: #a1f7a1;
+  background-color: #041604;
+  border-radius: 25%;
+  border: 3px solid #444;
+}
+
+.btn-secoundary {
+  background-color: #041604;
+  padding: 2em 4em;
+  margin-bottom: 3em;
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 2px solid white;
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
+}
+
+.btn-secoundary:hover {
+  color: #041604;
+  background-color: #a1f7a1;
+  border-radius: 25%;
+  border: 2px solid #041604;
+}
+
+.active {
+  border-top: 5px solid white;
 }
 /*# sourceMappingURL=style.css.map */
