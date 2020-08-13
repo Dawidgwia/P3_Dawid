@@ -9,12 +9,13 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: all ease-in-out 500ms;
-    
+
     &:hover {
         color: $secoundary;
         background-color: $dark;
         border-radius: 25%;
-        border: 3px solid #444;       
+        border: 3px solid #444;   
+        transform: scale(1.05);    
     }
 
 }
