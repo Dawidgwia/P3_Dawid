@@ -14,15 +14,22 @@
 
 // 3. Base style
 
+@import "base/typography";
+
 
 
 
 // 4. layout
 
 @import "layout/header";
+@import "layout/about";
+@import "layout/projects";
+@import "layout/Contact";
+@import "layout/footer";
 
 
 // 5. components
 
+@import "components/btn";
 
 

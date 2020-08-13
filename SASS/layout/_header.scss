@@ -1,5 +1,5 @@
 .main-header {
-    background-image: radial-gradient(circle at top center, $mint ,$primary);
+    background-image: radial-gradient(circle at top center, $dark ,$primary);
     color: $text-white;
     //border-bottom: black 2px solid;
 
@@ -9,45 +9,62 @@
 
         display: flex;
         padding-top: 5em;
+        width: 90%;
         flex-wrap: wrap;
-        transition: all ease-in-out 250ms;
-        &:hover{
-            transform: scale(1.05) rotate(-5deg);
-        }
+
 
         .hero-logo {
             width: 33.33333%;
             text-align: center;
+            position: relative;
+            animation: foto 3s  forwards;
             img {
                 border-radius: 75%;
                 width: 50%;
                 max-width: 20rem;
             }
         }
+        @keyframes foto {
+            0% {left:-1000px;}
+            100%{left:0;}
+            
+        }
 
         .hero-name {
             width: 33.33333%;
             margin:auto;
-
-            .hero-text {
-                @include text($font-black);
-                
-            }
-        
-        
+            position: relative;
+            animation: name 3s  forwards;
         }
+
+        @keyframes name {
+            0% {top:-1000px;}
+            100%{top:0;}
+            
+        }
+        
         .hero-work {
             width: 33.33333%;
             text-align: center;
             margin:auto;
-            .hero-text {
-                @include text($font-black)
-            }
+            position: relative;
+            animation: work 3s  forwards;
+        }
+
+        @keyframes work {
+            0% {right:-1000px;}
+            100%{right:0;}
+            
         }
     }
     .main-nav {
         display: flex;
         justify-content: flex-end;
+        animation-name: nav;
+        animation-duration: 2s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+        opacity: 0;
 
 
         width: 100%;
@@ -60,6 +77,7 @@
             list-style: none;
             padding-bottom: 0;
             transition: all ease-in-out 250ms;
+
             li:hover {
                 transform: scale(1.08);
 
@@ -86,8 +104,14 @@
             }
             
         }
+        @keyframes nav {
+            0% {opacity: 0;}
+            50%{opacity: 0.5;}
+            100%{opacity: 1;}
+            
+        }
     }
     .hamburger {
             display: none;
         }
-    }
+}
