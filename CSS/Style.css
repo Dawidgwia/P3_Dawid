@@ -466,12 +466,10 @@ template {
 }
 
 .title-large {
-  margin-top: 2em;
   font-weight: 900;
   font-size: 3.5em;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: underline;
   color: #05a63a;
 }
 
@@ -480,7 +478,6 @@ template {
   font-size: 3.5em;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: underline;
   color: white;
 }
 
@@ -714,7 +711,7 @@ main .wrap {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2em 3em 0;
+  margin: 2em 3em 5em;
 }
 
 main .wrap .img {
@@ -732,7 +729,8 @@ main .wrap .lorem {
 
 .projects {
   background-color: #05a63a;
-  padding: 4em 0;
+  padding: 2em 0 5em;
+  margin: 5em 0;
 }
 
 .projects .project-img {
@@ -741,6 +739,40 @@ main .wrap .lorem {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  margin: 1em;
+  background-color: #041604;
+}
+
+.card__img {
+  max-width: 100%;
+  display: block;
+  -webkit-transition: all ease-out 250ms;
+  transition: all ease-out 250ms;
+  opacity: 1;
+}
+
+.card__img:hover {
+  opacity: 0.4;
+}
+
+.card__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  -webkit-transition: opacity ease-out 250ms;
+  transition: opacity ease-out 250ms;
+}
+
+.card:hover .card__text {
+  opacity: 1;
 }
 
 .Contact {
@@ -825,4 +857,4 @@ main .wrap .lorem {
 .active {
   border-top: 5px solid white;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=Style.css.map */

@@ -8,14 +8,11 @@
 }
 
 .title-large {
-    margin-top: 2em;
     @include text ($font-black);
-    text-decoration:underline ;
     color: $primary;
 }
 .title-large-max {
     @include text ($font-black);
-    text-decoration:underline ;
     color: $white;
 }
 

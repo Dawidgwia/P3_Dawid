@@ -1,6 +1,7 @@
 .projects {
     background-color: $primary;
-    padding: 4em 0;
+    padding: 2em 0 5em;
+    margin: 5em 0;
     .project-img {
 
         
@@ -8,4 +9,36 @@
         justify-content: space-around;
     }
 
+}
+
+.card {
+    position: relative;
+    margin:1em; 
+    background-color: $dark;
+}
+
+.card__img {
+    max-width: 100%;
+    display: block;
+    transition: all ease-out 250ms;
+    opacity: 1;
+}
+
+.card__img:hover {
+    opacity:0.4;
+
+}
+
+.card__text {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    opacity: 0;
+    transition: opacity ease-out 250ms;
+
+}
+.card:hover .card__text {
+    opacity: 1;
 }
