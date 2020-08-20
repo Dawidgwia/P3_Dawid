@@ -739,11 +739,12 @@ main .wrap .lorem {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 99%;
 }
 
 .card {
   position: relative;
-  margin: 1em;
+  margin: 1em 1em 4em 1em;
   background-color: #041604;
 }
 
@@ -756,7 +757,7 @@ main .wrap .lorem {
 }
 
 .card__img:hover {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .card__text {
