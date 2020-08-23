@@ -7,7 +7,7 @@
         
         display: flex;
         justify-content: space-around;
-        width: 99%;
+        margin:  3em;
     }
 
 }
@@ -16,6 +16,35 @@
     position: relative;
     margin:1em 1em 4em 1em; 
     background-color: $dark;
+    box-shadow: 5px 5px 15px 12px #000000;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 1.25em ;
+        bottom: 1.25em ;
+        left: 1.25em ;
+        right: 1.25em ;
+    }
+    &::before {
+        transform: scale(0, 1);
+        transition: transform ease-out 250ms;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    &::after {
+        transform: scale(1, 0);
+        transition: transform ease-out 250ms;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+    &:hover::before {
+        transform: scale(1.08, 1);
+    }
+    &:hover::after {
+        transform: scale(1, 1.08);
+    }
+
 }
 
 .card__img {
@@ -25,7 +54,7 @@
     opacity: 1;
 }
 
-.card__img:hover {
+.card:hover .card__img {
     opacity:0.2;
 
 }

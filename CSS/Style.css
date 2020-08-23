@@ -739,13 +739,56 @@ main .wrap .lorem {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 99%;
+  margin: 3em;
 }
 
 .card {
   position: relative;
   margin: 1em 1em 4em 1em;
   background-color: #041604;
+  -webkit-box-shadow: 5px 5px 15px 12px #000000;
+          box-shadow: 5px 5px 15px 12px #000000;
+}
+
+.card::before, .card::after {
+  content: '';
+  position: absolute;
+  top: 1.25em;
+  bottom: 1.25em;
+  left: 1.25em;
+  right: 1.25em;
+}
+
+.card::before {
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform ease-out 250ms;
+  transition: -webkit-transform ease-out 250ms;
+  transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.card::after {
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: -webkit-transform ease-out 250ms;
+  transition: -webkit-transform ease-out 250ms;
+  transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.card:hover::before {
+  -webkit-transform: scale(1.08, 1);
+          transform: scale(1.08, 1);
+}
+
+.card:hover::after {
+  -webkit-transform: scale(1, 1.08);
+          transform: scale(1, 1.08);
 }
 
 .card__img {
@@ -756,7 +799,7 @@ main .wrap .lorem {
   opacity: 1;
 }
 
-.card__img:hover {
+.card:hover .card__img {
   opacity: 0.2;
 }
 
