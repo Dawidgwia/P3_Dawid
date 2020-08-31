@@ -693,8 +693,284 @@ template {
   }
 }
 
-.main-header .hamburger {
+.main-header .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.main-header * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.main-header a,
+.main-header a:visited,
+.main-header a:hover,
+.main-header a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-header h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 3em;
+  text-align: center;
+}
+
+.main-header .outer-menu {
   display: none;
+  position: fixed;
+  top: 2vh;
+  left: 45vh;
+  z-index: 1;
+}
+
+.main-header .outer-menu .checkbox-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+
+.main-header .outer-menu .checkbox-toggle:checked + .hamburger > div {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.main-header .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
+.main-header .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.main-header .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+  opacity: 0;
+}
+
+.main-header .outer-menu .checkbox-toggle:checked ~ .menu {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.main-header .outer-menu .checkbox-toggle:checked ~ .menu > div {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+
+.main-header .outer-menu .checkbox-toggle:checked ~ .menu > div > div {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.main-header .outer-menu .checkbox-toggle:hover + .hamburger {
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.main-header .outer-menu .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 0.5em 1em;
+  border-radius: 0 0.12em 0.12em 0;
+  cursor: pointer;
+  -webkit-transition: box-shadow 0.4s ease;
+  -webkit-transition: -webkit-box-shadow 0.4s ease;
+  transition: -webkit-box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.main-header .outer-menu .hamburger > div {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+      flex: none;
+  width: 100%;
+  height: 2px;
+  background: #FEFEFE;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.main-header .outer-menu .hamburger > div:before,
+.main-header .outer-menu .hamburger > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.main-header .outer-menu .hamburger > div:after {
+  top: 10px;
+}
+
+.main-header .outer-menu .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.main-header .outer-menu .menu > div {
+  width: 200vw;
+  height: 200vw;
+  color: #FEFEFE;
+  background: rgba(1, 107, 24, 0.97);
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+      flex: none;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.main-header .outer-menu .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+      flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.main-header .outer-menu .menu > div > div > ul {
+  list-style: none;
+  padding: 0 1em;
+  margin: 0;
+  display: block;
+  max-height: 100vh;
+}
+
+.main-header .outer-menu .menu > div > div > ul > li {
+  padding: 0;
+  margin: 1em;
+  font-size: 24px;
+  display: block;
+}
+
+.main-header .outer-menu .menu > div > div > ul > li > a {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+.main-header .outer-menu .menu > div > div > ul > li > a:hover {
+  color: #e5e5e5;
+}
+
+.main-header .outer-menu .menu > div > div > ul > li > a:hover:after {
+  width: 100%;
+}
+
+.main-header .outer-menu .menu > div > div > ul > li > a:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: -0.15em;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e5e5e5;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
 }
 
 main {
@@ -900,5 +1176,84 @@ main .wrap .lorem {
 
 .active {
   border-top: 5px solid white;
+}
+
+.main-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 60vh;
+  margin: 3em 0;
+}
+
+.form {
+  width: 20%;
+  position: relative;
+  height: 90px;
+  overflow: hidden;
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 30px;
+  border: none;
+  outline: none;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #000;
+}
+
+.form label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 /*# sourceMappingURL=Style.css.map */
