@@ -47,3 +47,32 @@
 .active {
     border-top: 5px solid $white;
 }
+button {
+    margin-top: 2em;
+    height: 3em;
+    width: 6em;
+    color: #fff;
+    border: 2px solid $primary;
+    background:$dark;
+    text-transform: uppercase;
+    font-weight: $font-normal;
+    letter-spacing: 0.15em;
+    border-radius: 25%;
+    transform: scale(1);
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+        background-color: rgba(197, 196, 196, 0.815);
+        color: $dark;
+        border: 2px soldi $dark;
+        font-weight: $font-bold;
+        transform: scale(1.25);
+    }
+    &::active {
+        background-color: rgba(197, 196, 196, 0.815);
+        color: $dark;
+        border: 2px soldi $dark;
+        font-weight: $font-bold;
+        transform: scale(1.25);
+    }
+}

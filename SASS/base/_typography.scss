@@ -47,4 +47,15 @@
     font-size: 1.3em;
     
 }
+.contact {
+    letter-spacing: 0.10em;
+    @include text ($font-bold);
+    font-size: 2.5em;
+}
+
+.contact-p {
+    letter-spacing: 0.05em;
+    @include text ($font-normal);
+    font-size: 1.5em ;
+}
 
