@@ -1,0 +1,18 @@
+@media all and (max-width: 980px) {
+    .card-3, .card__img-3, .card__text-3 , .Card__title-3, .card__body {
+        display: none;
+    }
+    .about-text {
+        font-size: 3em;
+    }
+    .about-para {
+        font-size: 1.3em;
+    }
+
+    .left {
+        img {
+            padding-top: 10em;
+        }
+    }
+
+}

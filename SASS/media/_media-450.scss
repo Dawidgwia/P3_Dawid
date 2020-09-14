@@ -1,0 +1,57 @@
+@media all and (max-width: 460px) {
+
+    .hero-name {
+        margin-top: 2em ;
+    }
+    .name-text, .work-text { 
+        font-size: 2em;
+    }
+    .title-large {
+        font-size: 2.5em;
+    }
+    .title-large-max {
+        font-size: 2.5em;
+    }
+    main .wrap .lorem {
+        padding:0;
+        margin-left: auto;
+        margin-right: auto;
+        .text-about {
+            font-size: 1em;
+        }
+    }
+    .container {
+        margin: 0;
+        padding: 0;
+        display: block;
+        .nav-footer {
+            margin: 0m;
+
+        }
+        .footer-text {
+            .footer-hedder {
+                font-size: 1.2em;
+            }
+            .footer-paragraph {
+                font-size: .9em;
+            }
+        }
+    }
+    .Contact .contact-large {
+        font-size: 1.4em;
+    }    
+    .Contact .contact-text {
+        font-size: 1.2em;
+        margin-bottom: 2em;
+    }
+
+    .about-text {
+        font-size: 2.3em;
+    }
+    .about-para {
+        font-size: 1.1em;
+    }
+    .main-about .wrap-about {
+        display: block;
+    }
+}
