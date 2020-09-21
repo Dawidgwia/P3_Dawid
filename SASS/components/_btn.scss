@@ -24,12 +24,6 @@
         border-radius: 25%;
         border: 3px solid #444;
     }
-    &:active {
-        color: $secoundary;
-        background-color: $dark;
-        border-radius: 25%;
-        border: 3px solid #444;
-    }
 
 }
 
@@ -59,12 +53,7 @@
         border-radius: 25%;   
         border: 2px solid $dark; 
     }
-    &:active {
-        color: $dark;
-        background-color: $secoundary;
-        border-radius: 25%;   
-        border: 2px solid $dark; 
-    }
+
 
 }
 
@@ -88,21 +77,14 @@ button {
     &:hover {
         background-color: rgba(197, 196, 196, 0.815);
         color: $dark;
-        border: 2px soldi $dark;
-        font-weight: $font-bold;
-        transform: scale(1.25);
-    }
-    &:active {
-        background-color: rgba(197, 196, 196, 0.815);
-        color: $dark;
-        border: 2px soldi $dark;
+        border: 2px solid $dark;
         font-weight: $font-bold;
         transform: scale(1.25);
     }
     &:focus {
         background-color: rgba(197, 196, 196, 0.815);
         color: $dark;
-        border: 2px soldi $dark;
+        border: 2px solid $dark;
         font-weight: $font-bold;
         transform: scale(1.25);
     }

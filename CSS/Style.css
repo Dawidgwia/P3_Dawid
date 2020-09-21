@@ -1011,13 +1011,6 @@ main .wrap .lorem {
   border: 3px solid #444;
 }
 
-.btn-primary:active {
-  color: #a1f7a1;
-  background-color: #041604;
-  border-radius: 25%;
-  border: 3px solid #444;
-}
-
 .btn-secoundary {
   background-color: #041604;
   padding: 2em 4em;
@@ -1040,13 +1033,6 @@ main .wrap .lorem {
 }
 
 .btn-secoundary:focus {
-  color: #041604;
-  background-color: #a1f7a1;
-  border-radius: 25%;
-  border: 2px solid #041604;
-}
-
-.btn-secoundary:active {
   color: #041604;
   background-color: #a1f7a1;
   border-radius: 25%;
@@ -1077,16 +1063,7 @@ button {
 button:hover {
   background-color: rgba(197, 196, 196, 0.815);
   color: #041604;
-  border: 2px soldi #041604;
-  font-weight: 700;
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-}
-
-button:active {
-  background-color: rgba(197, 196, 196, 0.815);
-  color: #041604;
-  border: 2px soldi #041604;
+  border: 2px solid #041604;
   font-weight: 700;
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
@@ -1095,7 +1072,7 @@ button:active {
 button:focus {
   background-color: rgba(197, 196, 196, 0.815);
   color: #041604;
-  border: 2px soldi #041604;
+  border: 2px solid #041604;
   font-weight: 700;
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
