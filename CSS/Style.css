@@ -1390,13 +1390,17 @@ button::active {
     display: block;
   }
   .container .nav-footer {
-    margin: 0m;
+    margin: 0;
+    padding-bottom: 1em;
+    padding-left: 0;
+    text-align: center;
   }
   .container .footer-text .footer-hedder {
     font-size: 1.2em;
   }
   .container .footer-text .footer-paragraph {
     font-size: .9em;
+    padding-bottom: .5em;
   }
   .Contact .contact-large {
     font-size: 1.4em;
@@ -1413,6 +1417,29 @@ button::active {
   }
   .main-about .wrap-about {
     display: block;
+  }
+  .main-projects {
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .main-projects .title-large-max {
+    display: none;
+  }
+  .main-contact {
+    height: 100vh;
+    margin-bottom: 1em;
+  }
+  .main-contact .form {
+    width: 8em;
+  }
+  .main-contact .contact {
+    font-size: 1.7em;
+    margin: 0 1em;
+    margin-bottom: .5em;
+  }
+  .main-contact .contact-p {
+    font-size: 1.2em;
+    margin: 0 1em;
   }
 }
 /*# sourceMappingURL=Style.css.map */
